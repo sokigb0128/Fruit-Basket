@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class TestScript : MonoBehaviour
 {
-	int a;
+	int Test;
     // Start is called before the first frame update
     void Start()
     {
-        a = 0;
+		
     }
 
     // Update is called once per frame
     void Update()
     {
-        a++;
+		if (Test < 5)
+		{
+			Test++;
+		}
     }
 }
