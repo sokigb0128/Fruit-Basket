@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMoveScript : MonoBehaviour
+public class Player : MonoBehaviour
 {
     Rigidbody m_rigidbody;
     Vector3 m_movingVelocity;
     Vector3 m_movingDirection;
-
 
     // Start is called before the first frame update
     void Start()
