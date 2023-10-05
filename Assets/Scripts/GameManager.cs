@@ -17,7 +17,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
     void Start()
     {
-        m_state = State.TITLE;
+        ChangeState(State.TITLE);
     }
 
     public bool IsGame()
