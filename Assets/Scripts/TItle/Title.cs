@@ -8,8 +8,7 @@ public class Title : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.Space))
         {
-            GameManager.Instance.SetState(GameManager.State.GAME);
-            gameObject.SetActive(false);
+            GameManager.Instance.ChangeState(GameManager.State.GAME);
         }
     }
 }

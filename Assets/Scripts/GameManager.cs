@@ -13,18 +13,21 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
     private State m_state;
 
+    [SerializeField] UIManager m_ui;
+
     void Start()
     {
         m_state = State.TITLE;
     }
 
-    public bool IsTitle()
+    public bool IsGame()
     {
-        return m_state == State.TITLE;
+        return m_state == State.GAME;
     }
 
-    public void SetState(State state)
+    public void ChangeState(State state)
     {
         m_state = state;
+        m_ui.ChangeState(state);
     }
 }
