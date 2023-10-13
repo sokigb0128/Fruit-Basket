@@ -15,7 +15,7 @@ public class ItemManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.Instance.IsTitle()) { return; }
+        if (GameManager.Instance.IsTitle) { return; }
 
         if (Time.frameCount % 30 == 0)
         {
