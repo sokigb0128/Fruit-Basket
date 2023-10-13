@@ -18,7 +18,7 @@ public class TimeLimit : MonoBehaviour
 
     void Update()
     {
-        if (!GameManager.Instance.IsGame()) return;
+        if (!GameManager.Instance.IsGame) return;
 
         time -= Time.deltaTime;
         text.text = "TimeLimit : " + (int)time;

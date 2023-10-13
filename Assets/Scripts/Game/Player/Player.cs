@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!GameManager.Instance.IsGame()) { return; }
+        if (!GameManager.Instance.IsGame) { return; }
 
         float x = Input.GetAxisRaw("Horizontal");
         m_movingDirection = new Vector3(x, 0, 0);
