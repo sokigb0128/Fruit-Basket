@@ -6,6 +6,11 @@ public class ItemManager : MonoBehaviour
 {
     [SerializeField] List<GameObject> m_fruit;
 
+    readonly int FRUIT_GENERATE_POS_X_MIN = -11;
+    readonly int FRUIT_GENERATE_POS_X_MAX = 11;
+    readonly int FRUIT_GENERATE_POS_Y = 12;
+    readonly int FRUIT_GENERATE_POS_Z = -5;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +24,7 @@ public class ItemManager : MonoBehaviour
 
         if (Time.frameCount % 30 == 0)
         {
-            Vector3 pos = new Vector3(Random.Range(-11, 11), 12, -5);
+            Vector3 pos = new Vector3(Random.Range(-FRUIT_GENERATE_POS_X_MIN, FRUIT_GENERATE_POS_X_MAX), FRUIT_GENERATE_POS_Y, -FRUIT_GENERATE_POS_Z);
             Instantiate(m_fruit[Random.Range(0, m_fruit.Count)], pos, Quaternion.identity);
         }
     }
